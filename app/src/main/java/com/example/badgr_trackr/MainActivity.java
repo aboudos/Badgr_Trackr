@@ -2,7 +2,9 @@ package com.example.badgr_trackr;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -23,7 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity{
-
+    int PERMISSIONS_REQUEST_ACCESS_ACCESS_FINE_LOCATION = 12;
     BottomNavigationView bottomNavigationView;
     HomePageFragment homeFragment = new HomePageFragment();
     MapPageFragment mapFragment = new MapPageFragment();
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity{
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.home_item);
 
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSIONS_REQUEST_ACCESS_ACCESS_FINE_LOCATION);
     }
 
     public boolean handleSelectNavigation(@NonNull MenuItem item) {
