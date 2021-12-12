@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,16 +7,185 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/accountPageFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Account"
-        android:textColor="#43a047"
+        android:id="@+id/BadgerTracker"
+        android:layout_width="412dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="677dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Badger Tracker"
+        android:textAlignment="center"
+        android:textColor="#F5F6F5"
         android:textSize="40sp"
-        android:textStyle="italic|bold"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/myAccount"
+        android:layout_width="159dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="607dp"
+        android:text="My Account"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BadgerTracker" />
+
+    <TextView
+        android:id="@+id/accountInformation"
+        android:layout_width="177dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="570dp"
+        android:text="Account Information"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/LocationHistorySwitch"
+        android:layout_width="376dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="191dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="496dp"
+        android:text="Display Location History:"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="378dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="252dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="440dp"
+        android:text="Email                                               user@gmail.com"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/changePasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="292dp"
+        android:layout_marginEnd="218dp"
+        android:layout_marginBottom="394dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="Change Password"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/LocationHistoryHeader"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="352dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="352dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Location History"
+        android:textAlignment="center"
+        android:textColor="#F5F6F5"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/FavoriteLocation"
+        android:layout_width="304dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="405dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="179dp"
+        android:background="#AEACAC"
+        android:text="Favorite Location:        Gordon's Dining Hall\n\n
+Number of Visits: 16\n\n
+Total Time Spent: 14h 25m\n\n
+Average Duration: 30m
+                "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/CommonlyVisited"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="575dp"
+        android:layout_marginEnd="225dp"
+        android:layout_marginBottom="134dp"
+        android:text="Commonly Visited:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="307dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="610dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="85dp"
+        android:background="#AEACAC"
+        android:text="Rheta's Market"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="307dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="660dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="35dp"
+        android:background="#AEACAC"
+        android:text="Nicholas Recreation Center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
