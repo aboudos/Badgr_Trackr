@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+        <View
+            android:id="@+id/subheader"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#9A9A9A"
+            android:layout_marginBottom="8dp">
+
+        </View>
+
+        <SearchView
+            android:theme="@style/SearchViewStyle"
+            android:id="@+id/search_bar"
+            android:layout_width="260dp"
+            android:layout_height="34dp"
+            android:layout_margin="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:elevation="2.5dp"
+            android:textSize="20dp"
+            android:queryBackground="@android:color/transparent"
+            android:paddingBottom="4dp"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="true"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search location"
+            android:background="@drawable/search_view_shape"/>
+
+        <ExpandableListView
+            android:id="@+id/expandable_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_marginTop="8dp"
+            android:groupIndicator="@drawable/group_indicator"
+            android:gravity="center|top"
+            android:listSelector="@android:color/transparent"
+            android:divider="@android:color/transparent" />
+
+</LinearLayout>
